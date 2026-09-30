@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviator Predictor System - Betway</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>🎯 Aviator Predictor</h1>
+                <p class="subtitle">Next Round Prediction System for Betway</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="card">
+                    <h2>Server Configuration</h2>
+                    <div class="input-group">
+                        <label for="serverNumber">Server Number</label>
+                        <input 
+                            type="number" 
+                            id="serverNumber" 
+                            placeholder="Enter server number (1-1000)" 
+                            min="1" 
+                            max="1000"
+                            class="input-field"
+                        >
+                        <small class="input-hint">Enter your Betway server number for accurate prediction</small>
+                    </div>
+                    <button id="predictBtn" class="predict-button">Get Prediction</button>
+                </div>
+            </section>
+
+            <!-- Prediction Result Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="card prediction-card">
+                    <h2>Prediction Result</h2>
+                    
+                    <!-- Multiplier Display -->
+                    <div class="multiplier-display">
+                        <div class="multiplier-value" id="multiplierValue">0.00x</div>
+                        <p class="multiplier-label">Predicted Multiplier</p>
+                    </div>
+
+                    <!-- Confidence Meter -->
+                    <div class="confidence-section">
+                        <div class="confidence-header">
+                            <span>Signal Confidence</span>
+                            <span id="confidencePercentage" class="confidence-percentage">0%</span>
+                        </div>
+                        <div class="confidence-bar">
+                            <div class="confidence-fill" id="confidenceFill"></div>
+                        </div>
+                        <p id="confidenceLabel" class="confidence-label">Analyzing...</p>
+                    </div>
+
+                    <!-- Signal Details -->
+                    <div class="signal-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Server Hash:</span>
+                            <span class="detail-value" id="serverHash">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Signal Type:</span>
+                            <span class="detail-value" id="signalType">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Prediction Range:</span>
+                            <span class="detail-value" id="predictionRange">1.00x - 15.00x</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Timestamp:</span>
+                            <span class="detail-value" id="timestamp">-</span>
+                        </div>
+                    </div>
+
+                    <!-- Risk Indicator -->
+                    <div class="risk-section">
+                        <h3>Risk Assessment</h3>
+                        <div class="risk-indicator" id="riskIndicator">
+                            <div class="risk-item">
+                                <span class="risk-label">Low Risk</span>
+                                <div class="risk-bar low"></div>
+                            </div>
+                            <div class="risk-item">
+                                <span class="risk-label">Medium Risk</span>
+                                <div class="risk-bar medium"></div>
+                            </div>
+                            <div class="risk-item">
+                                <span class="risk-label">High Risk</span>
+                                <div class="risk-bar high"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button id="copyBtn" class="btn btn-secondary">📋 Copy Prediction</button>
+                        <button id="newPredictionBtn" class="btn btn-primary">🔄 New Prediction</button>
+                    </div>
+                </div>
+
+                <!-- History Section -->
+                <div class="card history-card">
+                    <h2>Prediction History</h2>
+                    <div class="history-list" id="historyList">
+                        <p class="empty-history">No predictions yet</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Info Section -->
+            <section class="info-section">
+                <div class="card">
+                    <h2>ℹ️ How It Works</h2>
+                    <div class="info-content">
+                        <ol>
+                            <li><strong>Enter Server Number:</strong> Input your Betway server number (1-1000)</li>
+                            <li><strong>Algorithm Analysis:</strong> Our predictor analyzes server hash patterns</li>
+                            <li><strong>Generate Prediction:</strong> Predicts multiplier between 1.00x and 15.00x</li>
+                            <li><strong>Confidence Signal:</strong> Shows reliability percentage of the prediction</li>
+                            <li><strong>Track History:</strong> Keep record of all predictions made</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>⚠️ Disclaimer</h2>
+                    <p>This predictor system is for entertainment purposes only. Gambling involves risk. Please gamble responsibly. This tool does not guarantee winnings and should not be used as the sole basis for betting decisions.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Aviator Predictor System. All rights reserved.</p>
+            <p class="footer-disclaimer">Use responsibly. This is a prediction tool, not a guarantee.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
